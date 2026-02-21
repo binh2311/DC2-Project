@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!--
+  =========================================================
+  🏫 THPT DIỄN CHÂU 2 - Ủng Hộ
+  =========================================================
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ủng Hộ - THPT Diễn Châu 2</title>
+    <meta name="description" content="Ủng hộ để trang web THPT Diễn Châu 2 tiếp tục phát triển">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- 📌 HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="ANH/logotruong.jpg" alt="Logo THPT Diễn Châu 2" class="logo-icon">
+                <span class="logo-text">THPT Diễn Châu 2</span>
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-tabs" id="navTabs">
+                    <li><a class="tab-btn" href="index.html">Trang chủ</a></li>
+                    <li><a class="tab-btn" href="tu-hao.html">Tự hào</a></li>
+                    <li><a class="tab-btn" href="hoc-sinh.html">Học sinh</a></li>
+                    <li><a class="tab-btn" href="thu-vien.html">Thư viện ảnh</a></li>
+                    <li><a class="tab-btn active" href="ung-ho.html">Ủng hộ 🌱</a></li>
+                </ul>
+            </nav>
+
+            <button class="dark-toggle" id="darkToggle" onclick="toggleDarkMode()" aria-label="Chế độ tối"
+                title="Sáng / Tối">
+                <span id="darkIcon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- 📌 NỘI DUNG: ỦNG HỘ -->
+    <main>
+
+        <!-- Banner -->
+        <div class="donate-hero">
+            <div class="deco-circle deco-1"></div>
+            <div class="deco-circle deco-2"></div>
+            <div class="donate-hero-avatar">🌱</div>
+            <h1>Nuôi Tôi</h1>
+            <p>Ủng hộ để trang web DC2 tiếp tục phát triển và duy trì hoạt động 🚀</p>
+            <div class="donate-badges">
+                <span class="donate-badge">✅ Minh bạch 100%</span>
+                <span class="donate-badge">📊 Sao kê công khai</span>
+                <span class="donate-badge">💯 Cam kết rõ ràng</span>
+            </div>
+        </div>
+
+        <div class="donate-body">
+
+            <!-- === QR Code Card === -->
+            <div class="donate-card reveal">
+                <h2>💳 Ủng Hộ Ngay</h2>
+                <p class="donate-card-desc">Quét mã QR hoặc chuyển khoản theo thông tin bên dưới</p>
+
+                <div class="donate-qr">
+                    <img src="ANH/QRMBBANK.jpg" alt="QR Code MB Bank" class="donate-qr-img"
+                        style="width:200px;border-radius:16px">
+                </div>
+
+                <div class="donate-bank-info">
+                    <p class="bank-name">MB Bank</p>
+                    <p class="bank-owner">NGUYEN THANH BINH</p>
+                    <p class="bank-number">STK: 1199231108</p>
+                </div>
+
+                <div class="donate-buttons">
+                    <a href="https://me.momo.vn/G9IwTNsRuZuouBCktGUyIR" class="donate-momo-btn" target="_blank"
+                        rel="noopener noreferrer">
+                        📱 MoMo
+                    </a>
+                </div>
+            </div>
+
+            <!-- === Tại sao nên ủng hộ === -->
+            <div class="donate-section reveal">
+                <h2 class="donate-section-title">
+                    🎯 Tại Sao Nên Ủng Hộ?
+                    <span class="title-line"></span>
+                </h2>
+                <div class="donate-reasons">
+                    <div class="reason-card reveal stagger">
+                        <div class="reason-icon">🖥️</div>
+                        <h3>Duy Trì Server</h3>
+                        <p>Chi phí server và domain để trang web hoạt động 24/7.</p>
+                    </div>
+                    <div class="reason-card reveal stagger">
+                        <div class="reason-icon">🚀</div>
+                        <h3>Phát Triển Tính Năng</h3>
+                        <p>Thêm tính năng mới, cải thiện trải nghiệm người dùng.</p>
+                    </div>
+                    <div class="reason-card reveal stagger">
+                        <div class="reason-icon">🔒</div>
+                        <h3>Bảo Mật & Ổn Định</h3>
+                        <p>Nâng cấp hệ thống, đảm bảo dịch vụ ổn định.</p>
+                    </div>
+                    <div class="reason-card reveal stagger">
+                        <div class="reason-icon">☕</div>
+                        <h3>Cà Phê Cho Dev</h3>
+                        <p>Để code xuyên đêm fix bug và phát triển tính năng mới!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- === Phân bổ ngân sách === -->
+            <div class="donate-section reveal">
+                <h2 class="donate-section-title">
+                    📊 Phân Bổ Ngân Sách
+                    <span class="title-line"></span>
+                </h2>
+                <div class="budget-card">
+                    <div class="budget-item">
+                        <div class="budget-label">
+                            <span>🖥️ Server & Domain</span>
+                            <span class="budget-percent">40%</span>
+                        </div>
+                        <div class="budget-bar">
+                            <div class="budget-fill" style="width:40%"></div>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-label">
+                            <span>🚀 Phát triển tính năng</span>
+                            <span class="budget-percent">25%</span>
+                        </div>
+                        <div class="budget-bar">
+                            <div class="budget-fill" style="width:25%"></div>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-label">
+                            <span>☕ Cà phê & sinh hoạt</span>
+                            <span class="budget-percent">20%</span>
+                        </div>
+                        <div class="budget-bar">
+                            <div class="budget-fill" style="width:20%"></div>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-label">
+                            <span>📚 Học tập nâng cao</span>
+                            <span class="budget-percent">10%</span>
+                        </div>
+                        <div class="budget-bar">
+                            <div class="budget-fill" style="width:10%"></div>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-label">
+                            <span>☂️ Dự phòng</span>
+                            <span class="budget-percent">5%</span>
+                        </div>
+                        <div class="budget-bar">
+                            <div class="budget-fill" style="width:5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- === Cam kết === -->
+            <div class="donate-section reveal">
+                <h2 class="donate-section-title">
+                    ✅ Cam Kết
+                    <span class="title-line"></span>
+                </h2>
+                <div class="commit-card">
+                    <div class="commit-item">
+                        <div class="commit-check">✓</div>
+                        <p><strong>Sao kê minh bạch:</strong> Công khai mọi khoản thu chi, cập nhật định kỳ.</p>
+                    </div>
+                    <div class="commit-item">
+                        <div class="commit-check">✓</div>
+                        <p><strong>Không lạm dụng:</strong> 100% tiền ủng hộ dùng cho mục đích đã cam kết.</p>
+                    </div>
+                    <div class="commit-item">
+                        <div class="commit-check">✓</div>
+                        <p><strong>Hỗ trợ 24/7:</strong> Sẵn sàng trả lời mọi thắc mắc về việc sử dụng tiền.</p>
+                    </div>
+                    <div class="commit-item">
+                        <div class="commit-check">✓</div>
+                        <p><strong>Trang web miễn phí:</strong> DC2 luôn miễn phí cho tất cả mọi người.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- === My Stack === -->
+            <div class="donate-section reveal">
+                <h2 class="donate-section-title">
+                    🛠️ My Stack
+                    <span class="title-line"></span>
+                </h2>
+
+                <!-- Công cụ -->
+                <div class="stack-card">
+                    <h3 class="stack-subtitle">Công cụ</h3>
+                    <div class="stack-tools">
+                        <img src="https://i.imgur.com/X6bIyoB.png" alt="GitHub, VS Code, Linux, Git" class="tools-img">
+                    </div>
+                </div>
+
+                <!-- Ngôn ngữ sử dụng nhiều nhất -->
+                <div class="stack-card stack-lang-card">
+                    <h3 class="stack-subtitle">📊 Ngôn ngữ sử dụng nhiều nhất</h3>
+
+                    <div class="lang-bar">
+                        <div class="lang-fill" style="width:67.29%;background:#a855f7" title="CSS 67.29%"></div>
+                        <div class="lang-fill" style="width:14.26%;background:#eab308" title="JavaScript 14.26%"></div>
+                        <div class="lang-fill" style="width:8.34%;background:#3b82f6" title="Python 8.34%"></div>
+                        <div class="lang-fill" style="width:6.44%;background:#6366f1" title="PHP 6.44%"></div>
+                        <div class="lang-fill" style="width:3.66%;background:#1d4ed8" title="Lua 3.66%"></div>
+                        <div class="lang-fill" style="width:0.01%;background:#22c55e" title="Batchfile 0.01%"></div>
+                    </div>
+
+                    <div class="lang-legend">
+                        <div class="lang-item"><span class="lang-dot" style="background:#a855f7"></span> CSS 67.29%
+                        </div>
+                        <div class="lang-item"><span class="lang-dot" style="background:#eab308"></span> JavaScript
+                            14.26%</div>
+                        <div class="lang-item"><span class="lang-dot" style="background:#3b82f6"></span> Python 8.34%
+                        </div>
+                        <div class="lang-item"><span class="lang-dot" style="background:#6366f1"></span> PHP 6.44%</div>
+                        <div class="lang-item"><span class="lang-dot" style="background:#1d4ed8"></span> Lua 3.66%</div>
+                        <div class="lang-item"><span class="lang-dot" style="background:#22c55e"></span> Batchfile 0.01%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lời cảm ơn -->
+            <div class="donate-thanks reveal">
+                <p>Made with ❤️ by Nguyễn Thanh Bình</p>
+                <p class="donate-thanks-sub">Mọi đóng góp dù nhỏ đều là động lực lớn để mình tiếp tục! 🙏</p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- 📌 NÚT BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Về đầu trang" title="Về đầu trang">↑</button>
+
+
+    <!-- 📌 FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>💙 THPT Diễn Châu 2</h3>
+                    <p>
+                        Trang web này được làm bởi một học sinh yêu trường,
+                        mong muốn gìn giữ và chia sẻ những kỷ niệm đẹp
+                        của mái trường DC2 thân yêu. 🤝
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/dienchau2nghean" class="social-link" target="_blank">📘
+                            Facebook Trường</a>
+                        <a href="https://www.facebook.com/profile.php?id=100064803966506" class="social-link"
+                            target="_blank">📘 Facebook Đoàn trường</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Chuyên mục</h4>
+                    <ul>
+                        <li><a href="index.html">🏠 Trang chủ</a></li>
+                        <li><a href="tu-hao.html">⭐ Góc tự hào</a></li>
+                        <li><a href="hoc-sinh.html">🎓 Góc học sinh</a></li>
+                        <li><a href="thu-vien.html">📸 Thư viện ảnh</a></li>
+                        <li><a href="ung-ho.html">🌱 Ủng hộ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Thông tin</h4>
+                    <ul>
+                        <li><a href="#">📍 Đức Châu, Nghệ An</a></li>
+                        <li><a href="#">📞 0238 3675 113</a></li>
+                        <li><a href="#">✉️ c3dienchau2@nghean.edu.vn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 THPT Diễn Châu 2. Tạo với 💙 bởi Nguyễn Thanh Bình.</p>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Về đầu trang</button>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- 📌 JAVASCRIPT -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('dc2-dark-mode');
+            if (saved === 'true') {
+                document.body.classList.add('dark-mode');
+                var icon = document.getElementById('darkIcon');
+                if (icon) icon.textContent = '☀️';
+            }
+        })();
+
+        function toggleDarkMode() {
+            var body = document.body;
+            var icon = document.getElementById('darkIcon');
+            body.classList.toggle('dark-mode');
+            var isDark = body.classList.contains('dark-mode');
+            icon.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('dc2-dark-mode', isDark ? 'true' : 'false');
+        }
+
+        function toggleMobileMenu() {
+            var navTabs = document.getElementById('navTabs');
+            navTabs.classList.toggle('open');
+        }
+
+        /* 👁️ Scroll Reveal */
+        (function () {
+            var revealElements = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) {
+                revealElements.forEach(function (el) { el.classList.add('revealed'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            revealElements.forEach(function (el) { observer.observe(el); });
+        })();
+
+        /* ⬆️ Back to Top */
+        (function () {
+            var btn = document.getElementById('backToTop');
+            if (!btn) return;
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+            btn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+
+        /* 🎬 Page Transition — fade-out khi chuyển trang */
+        (function () {
+            document.addEventListener('click', function (e) {
+                var link = e.target.closest('a[href]');
+                if (!link) return;
+                var href = link.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.target === '_blank') return;
+                e.preventDefault();
+                document.body.classList.add('page-leaving');
+                setTimeout(function () { window.location.href = href; }, 300);
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

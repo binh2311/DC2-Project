@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!--
+  =========================================================
+  🏫 THPT DIỄN CHÂU 2 - Trang Chủ
+  =========================================================
+  📁 FILE LIÊN QUAN: style.css (giao diện)
+  =========================================================
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THPT Diễn Châu 2 - Nơi chắp cánh ước mơ</title>
+    <meta name="description"
+        content="Trang web giới thiệu Trường THPT Diễn Châu 2, Diễn Châu, Nghệ An — Nơi chắp cánh ước mơ cho hàng ngàn thế hệ học sinh.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:title" content="THPT Diễn Châu 2 — Nơi chắp cánh ước mơ">
+    <meta property="og:description"
+        content="Trang web giới thiệu Trường THPT Diễn Châu 2, Diễn Châu, Nghệ An — Hơn 20 năm đồng hành cùng thế hệ trẻ.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         📌 HEADER & MENU
+         ===================================================== -->
+    <header class="header">
+        <div class="header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="ANH/logotruong.jpg" alt="Logo THPT Diễn Châu 2" class="logo-icon">
+                <span class="logo-text">THPT Diễn Châu 2</span>
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-tabs" id="navTabs">
+                    <li><a class="tab-btn active" href="index.html">Trang chủ</a></li>
+                    <li><a class="tab-btn" href="tu-hao.html">Tự hào</a></li>
+                    <li><a class="tab-btn" href="hoc-sinh.html">Học sinh</a></li>
+                    <li><a class="tab-btn" href="thu-vien.html">Thư viện ảnh</a></li>
+                    <li><a class="tab-btn" href="ung-ho.html">Ủng hộ 🌱</a></li>
+                </ul>
+            </nav>
+
+            <button class="dark-toggle" id="darkToggle" onclick="toggleDarkMode()" aria-label="Chế độ tối"
+                title="Sáng / Tối">
+                <span id="darkIcon">🌙</span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         📌 TRANG CHỦ
+         Hero Banner + Giới thiệu ngắn.
+         ===================================================== -->
+    <main>
+
+        <!-- Hero Banner -->
+        <div class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-deco hero-deco-1"></div>
+            <div class="hero-deco hero-deco-2"></div>
+            <div class="hero-deco hero-deco-3"></div>
+
+            <div class="hero-content">
+                <div class="hero-badge">🏫 THPT Diễn Châu 2 — Nghệ An</div>
+
+                <h1 class="hero-title">
+                    Nơi chắp cánh<br>
+                    <span class="highlight">những ước mơ</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Chào mừng bạn đến với trang giới thiệu trường THPT Diễn Châu 2 — ngôi trường hơn 60 năm xây dựng nền
+                    tảng tri thức, nuôi dưỡng tình bạn và thắp lên những ước mơ tươi đẹp nhất của tuổi thanh xuân.
+                </p>
+
+                <a href="tu-hao.html" class="hero-cta">
+                    Khám phá ngôi trường ✨
+                </a>
+            </div>
+        </div>
+
+        <!-- Giới thiệu ngắn bên dưới hero -->
+        <div class="home-intro">
+            <div class="home-intro-inner reveal">
+                <h2>Chào mừng đến DC2! 👋</h2>
+                <p>
+                    Trang web này được tạo bởi một học sinh yêu trường,
+                    với mong muốn giới thiệu về ngôi trường THPT Diễn Châu 2
+                    thân yêu qua góc nhìn của chính học sinh. Hãy bấm vào
+                    các mục ở thanh Menu để khám phá nhé!
+                </p>
+            </div>
+
+            <!-- Con số ấn tượng -->
+            <div class="home-intro-inner">
+                <div class="stats-row" id="homeStats">
+                    <div class="stat-card reveal stagger">
+                        <span class="num count-up" data-target="1965">0</span>
+                        <span class="label">Năm thành lập</span>
+                    </div>
+                    <div class="stat-card reveal stagger">
+                        <span class="num count-up" data-target="1800" data-suffix="+">0</span>
+                        <span class="label">Học sinh</span>
+                    </div>
+                    <div class="stat-card reveal stagger">
+                        <span class="num count-up" data-target="10" data-prefix="Top ">0</span>
+                        <span class="label">Tỉnh Nghệ An</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 khối giới thiệu nhanh — Khám phá thêm -->
+            <div class="home-intro-inner">
+                <div class="explore-heading reveal">
+                    <span class="explore-tag">✦ Khám phá thêm ✦</span>
+                    <h2 class="explore-title">Hành trình cùng Diễn Châu 2</h2>
+                    <div class="explore-line"></div>
+                </div>
+
+                <div class="explore-cards">
+                    <a href="tu-hao.html" class="explore-card reveal stagger">
+                        <div class="explore-card-header grad-blue">
+                            <div class="explore-emoji">🏆</div>
+                            <h3>Góc Tự Hào</h3>
+                        </div>
+                        <div class="explore-card-body">
+                            <p>Hơn 60 năm lịch sử, những thành tích vẻ vang và truyền thống hiếu học của trường.</p>
+                            <span class="explore-link">Khám phá <span class="arrow">→</span></span>
+                        </div>
+                    </a>
+                    <a href="hoc-sinh.html" class="explore-card reveal stagger">
+                        <div class="explore-card-header grad-amber">
+                            <div class="explore-emoji">🎓</div>
+                            <h3>Góc Học Sinh</h3>
+                        </div>
+                        <div class="explore-card-body">
+                            <p>Câu lạc bộ sôi nổi, sự kiện đáng nhớ — cuộc sống học sinh năng động và đầy màu sắc.</p>
+                            <span class="explore-link">Khám phá <span class="arrow">→</span></span>
+                        </div>
+                    </a>
+                    <a href="thu-vien.html" class="explore-card reveal stagger">
+                        <div class="explore-card-header grad-purple">
+                            <div class="explore-emoji">📸</div>
+                            <h3>Thư Viện Ảnh</h3>
+                        </div>
+                        <div class="explore-card-body">
+                            <p>Bộ sưu tập khoảnh khắc đẹp — những ký ức thanh xuân không thể nào quên.</p>
+                            <span class="explore-link">Khám phá <span class="arrow">→</span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- 📌 NÚT BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Về đầu trang" title="Về đầu trang">↑</button>
+
+
+    <!-- =====================================================
+         📌 FOOTER
+         ===================================================== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+
+                <div class="footer-about">
+                    <h3>💙 THPT Diễn Châu 2</h3>
+                    <p>
+                        Trang web này được làm bởi một học sinh yêu trường,
+                        mong muốn gìn giữ và chia sẻ những kỷ niệm đẹp
+                        của mái trường DC2 thân yêu. 🤝
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/dienchau2nghean" class="social-link" target="_blank">📘
+                            Facebook Trường</a>
+                        <a href="https://www.facebook.com/profile.php?id=100064803966506" class="social-link"
+                            target="_blank">📘 Facebook Đoàn trường</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Chuyên mục</h4>
+                    <ul>
+                        <li><a href="index.html">🏠 Trang chủ</a></li>
+                        <li><a href="tu-hao.html">⭐ Góc tự hào</a></li>
+                        <li><a href="hoc-sinh.html">🎓 Góc học sinh</a></li>
+                        <li><a href="thu-vien.html">📸 Thư viện ảnh</a></li>
+                        <li><a href="ung-ho.html">🌱 Ủng hộ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Thông tin</h4>
+                    <ul>
+                        <li><a href="#">📍 Đức Châu, Nghệ An</a></li>
+                        <li><a href="#">📞 0238 3675 113</a></li>
+                        <li><a href="#">✉️ c3dienchau2@nghean.edu.vn</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 THPT Diễn Châu 2. Tạo với 💙 bởi Nguyễn Thanh Bình.</p>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    ↑ Về đầu trang
+                </button>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- =====================================================
+         📌 JAVASCRIPT
+         ===================================================== -->
+    <script>
+        /* 🌙 Khôi phục Dark Mode */
+        (function () {
+            var saved = localStorage.getItem('dc2-dark-mode');
+            if (saved === 'true') {
+                document.body.classList.add('dark-mode');
+                var icon = document.getElementById('darkIcon');
+                if (icon) icon.textContent = '☀️';
+            }
+        })();
+
+        /* 🌙 Bật/Tắt Dark Mode */
+        function toggleDarkMode() {
+            var body = document.body;
+            var icon = document.getElementById('darkIcon');
+            body.classList.toggle('dark-mode');
+            var isDark = body.classList.contains('dark-mode');
+            icon.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('dc2-dark-mode', isDark ? 'true' : 'false');
+        }
+
+        /* 📱 Menu Mobile */
+        function toggleMobileMenu() {
+            var navTabs = document.getElementById('navTabs');
+            navTabs.classList.toggle('open');
+        }
+
+        /* 🔢 Đếm số tự động */
+        function runCountUp() {
+            var counters = document.querySelectorAll('#homeStats .count-up');
+            var duration = 1800;
+            counters.forEach(function (el) {
+                var target = parseInt(el.getAttribute('data-target'));
+                var prefix = el.getAttribute('data-prefix') || '';
+                var suffix = el.getAttribute('data-suffix') || '';
+                el.textContent = prefix + '0' + suffix;
+                var startTime = null;
+                function animate(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    var elapsed = currentTime - startTime;
+                    var progress = Math.min(elapsed / duration, 1);
+                    var ease = 1 - Math.pow(1 - progress, 4);
+                    var currentNum = Math.floor(ease * target);
+                    el.textContent = prefix + currentNum.toLocaleString() + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        el.textContent = prefix + target.toLocaleString() + suffix;
+                    }
+                }
+                requestAnimationFrame(animate);
+            });
+        }
+        runCountUp();
+
+        /* 👁️ Scroll Reveal */
+        (function () {
+            var revealElements = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) {
+                revealElements.forEach(function (el) { el.classList.add('revealed'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            revealElements.forEach(function (el) { observer.observe(el); });
+        })();
+
+        /* 🎬 Parallax Hero */
+        (function () {
+            var heroBg = document.querySelector('.hero-bg');
+            var heroOverlay = document.querySelector('.hero-overlay');
+            var heroContent = document.querySelector('.hero-content');
+            var heroDeco1 = document.querySelector('.hero-deco-1');
+            var heroDeco2 = document.querySelector('.hero-deco-2');
+            var heroDeco3 = document.querySelector('.hero-deco-3');
+            var hero = document.querySelector('.hero');
+            var ticking = false;
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(function () {
+                        handleParallax();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            function handleParallax() {
+                if (window.innerWidth <= 768) return;
+                var scrollY = window.pageYOffset;
+                var heroHeight = hero ? hero.offsetHeight : 600;
+                if (scrollY > heroHeight + 100) return;
+
+                if (heroBg) heroBg.style.transform = 'translateY(' + (scrollY * 0.4) + 'px)';
+                if (heroOverlay) heroOverlay.style.transform = 'translateY(' + (scrollY * 0.3) + 'px)';
+                if (heroDeco1) heroDeco1.style.transform = 'translateY(' + (scrollY * 0.15) + 'px)';
+                if (heroDeco2) heroDeco2.style.transform = 'translateY(' + (scrollY * -0.1) + 'px)';
+                if (heroDeco3) heroDeco3.style.transform = 'translateY(' + (scrollY * 0.25) + 'px)';
+
+                if (heroContent) {
+                    var contentOffset = scrollY * 0.5;
+                    var contentOpacity = 1 - (scrollY / heroHeight) * 1.2;
+                    contentOpacity = Math.max(contentOpacity, 0);
+                    heroContent.style.transform = 'translateY(' + contentOffset + 'px)';
+                    heroContent.style.opacity = contentOpacity;
+                }
+            }
+        })();
+
+        /* ⬆️ Back to Top */
+        (function () {
+            var btn = document.getElementById('backToTop');
+            if (!btn) return;
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+            btn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+
+        /* 🎬 Page Transition — fade-out khi chuyển trang */
+        (function () {
+            document.addEventListener('click', function (e) {
+                var link = e.target.closest('a[href]');
+                if (!link) return;
+                var href = link.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.target === '_blank') return;
+                e.preventDefault();
+                document.body.classList.add('page-leaving');
+                setTimeout(function () { window.location.href = href; }, 300);
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
