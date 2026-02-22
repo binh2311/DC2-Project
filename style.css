@@ -366,16 +366,27 @@ img {
 
 /* ---------------------------------------------------------
    📌 4. PAGE TRANSITION
-   Fade-in khi tải trang + fade-out khi chuyển trang
-   (tương tự framer-motion AnimatePresence)
+   Fade + slide khi tải và chuyển trang — mượt mà, premium
    --------------------------------------------------------- */
 body {
     opacity: 0;
-    animation: pageEnter 0.4s var(--ease) 0.05s forwards;
+    animation: pageEnter 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.05s forwards;
 }
 
 body.page-leaving {
-    animation: pageExit 0.3s var(--ease) forwards;
+    animation: pageExit 0.35s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+    pointer-events: none;
+}
+
+/* Slide effect trên main/footer — tránh transform trên body phá vỡ position:fixed (lightbox) */
+body>main,
+body>footer {
+    animation: contentSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+}
+
+body.page-leaving>main,
+body.page-leaving>footer {
+    animation: contentSlideOut 0.35s cubic-bezier(0.55, 0, 1, 0.45) forwards;
 }
 
 @keyframes pageEnter {
@@ -394,6 +405,60 @@ body.page-leaving {
     }
 
     to {
+        opacity: 0;
+    }
+}
+
+@keyframes contentSlideIn {
+    from {
+        transform: translateY(18px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes contentSlideOut {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-12px) scale(0.995);
+    }
+}
+
+/* Thanh accent chạy ngang khi chuyển trang */
+.page-transition-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--primary-light), var(--accent));
+    z-index: 9999;
+    pointer-events: none;
+    transition: none;
+}
+
+.page-transition-bar.active {
+    animation: transitionBar 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes transitionBar {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    60% {
+        width: 80%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
         opacity: 0;
     }
 }

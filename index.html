@@ -371,16 +371,27 @@
             });
         })();
 
-        /* 🎬 Page Transition — fade-out khi chuyển trang */
+        /* 🎬 Page Transition — mượt mà khi chuyển trang */
         (function () {
+            // Tạo thanh loading bar
+            var bar = document.createElement('div');
+            bar.className = 'page-transition-bar';
+            document.body.appendChild(bar);
+
             document.addEventListener('click', function (e) {
                 var link = e.target.closest('a[href]');
                 if (!link) return;
                 var href = link.getAttribute('href');
                 if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.target === '_blank') return;
+                // Không chuyển nếu đang ở trang hiện tại
+                var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                if (href === currentPage) return;
                 e.preventDefault();
+                bar.classList.remove('active');
+                void bar.offsetWidth;
+                bar.classList.add('active');
                 document.body.classList.add('page-leaving');
-                setTimeout(function () { window.location.href = href; }, 300);
+                setTimeout(function () { window.location.href = href; }, 350);
             });
         })();
     </script>
